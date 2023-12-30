@@ -56,6 +56,17 @@ public class MiLectorJson {
                 System.out.println("Duracion: "+ duracion);
                 trabajo.put("duracion", duracion);
             }
+
+            //comprobamos edad si es entero
+            Object edadObj = objetoJSON.get("edad");
+            if (edadObj instanceof Integer) {
+                int edad = objetoJSON.getInt("edad");
+                System.out.println("La edad en el JSON es: " + edad);
+            } else {
+                System.out.println("Error: La edad en el JSON no es un número entero.");
+                return; // Sale del programa
+            }
+
             //escribimos duracion
             try(FileWriter fileWriter = new FileWriter(filePath)){
                 fileWriter.write(objetoJSON.toString(2));
