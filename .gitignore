@@ -60,3 +60,6 @@ target/
 
 # NODE
 node_modules
+
+#json ya no usado
+main/java/datosUsuarioModificado.json

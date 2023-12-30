@@ -43,6 +43,14 @@ public class MiLectorJson {
                     System.out.println("Error escribiendo el archivo: " + e.getMessage());
             }
 
+            //funcionalidad para imprimir trabajos
+            JSONArray trabajos = objetoJSON.getJSONArray("trabajos");
+            System.out.println("Trabajos de " + nombre + ":");
+            for(int i =0;i< trabajos.length(); i++){
+                JSONObject trabajo = trabajos.getJSONObject(i);
+                System.out.println("Trabajo: " + trabajo.getString("puesto"));
+            }
+
 
         } catch (IOException e) {
             System.out.println("Error leyendo el archivo: " + e.getMessage());
