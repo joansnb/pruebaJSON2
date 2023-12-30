@@ -48,7 +48,8 @@ public class MiLectorJson {
             System.out.println("Trabajos de " + nombre + ":");
             for(int i =0;i< trabajos.length(); i++){
                 JSONObject trabajo = trabajos.getJSONObject(i);
-                System.out.println("Trabajo: " + trabajo.getString("puesto"));
+                System.out.println("Empresa: " + trabajo.getString("empresa") + " puesto: " + trabajo.getString("puesto"));
+
             }
 
 
