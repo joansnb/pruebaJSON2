@@ -35,6 +35,8 @@ public class MiLectorJson {
             JSONArray habilidadesNueva = jsonNuevo.getJSONArray("habilidades");
             habilidadesNueva.put("GIT");
 
+            //escribimos en nuevo archivo, hacemos otro FileWrite
+            //creamos excepcion para leer archivo
             try(FileWriter fileWriter = new FileWriter(nuevoJsonPath)){
                 fileWriter.write(jsonNuevo.toString(2));
             }catch (IOException e){
