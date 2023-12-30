@@ -8,6 +8,7 @@ public class MiLectorJson {
     public static void main(String[] args) {
         String filePath = "src/main/java/MiLectorJson.java"; // ruta real de archivo JSON
 
+        //try/catch para leer Json
         try {
             String content = new String(Files.readAllBytes(Paths.get(filePath)));
             JSONObject objetoJSON = new JSONObject(content);
