@@ -10,12 +10,14 @@
     {
       "puesto": "Desarrolladora Junior",
       "añoFin": 2019,
+      "duracion": 2,
       "añoInicio": 2017,
       "empresa": "TechCorp"
     },
     {
       "puesto": "Desarrolladora Senior",
-      "añoFin": "Actualidad",
+      "añoFin": 2023,
+      "duracion": 4,
       "añoInicio": 2019,
       "empresa": "DevSolutions"
     }

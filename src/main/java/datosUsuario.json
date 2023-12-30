@@ -1,26 +1,33 @@
 {
-  "nombre": "Yennefer",
-  "apellido": "of Vengerberg",
-  "edad": 28,
   "ciudad": "Madrid",
   "educación": {
     "universidad": "Universidad Francisco de Vitoria",
-    "carrera": "Ingeniería Informática",
-    "añoGraduación": 2017
+    "añoGraduación": 2017,
+    "carrera": "Ingeniería Informática"
   },
+  "apellido": "of Vengerberg",
   "trabajos": [
     {
-      "empresa": "TechCorp",
       "puesto": "Desarrolladora Junior",
+      "añoFin": 2019,
+      "duracion": 2,
       "añoInicio": 2017,
-      "añoFin": 2019
+      "empresa": "TechCorp"
     },
     {
-      "empresa": "DevSolutions",
       "puesto": "Desarrolladora Senior",
+      "añoFin": 2023,
+      "duracion": 4,
       "añoInicio": 2019,
-      "añoFin": "Actualidad"
+      "empresa": "DevSolutions"
     }
   ],
-  "habilidades": ["Java", "Python", "SQL", "React"]
+  "nombre": "Yennefer",
+  "edad": 28,
+  "habilidades": [
+    "Java",
+    "Python",
+    "SQL",
+    "React"
+  ]
 }
