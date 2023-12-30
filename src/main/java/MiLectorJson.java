@@ -43,15 +43,25 @@ public class MiLectorJson {
                     System.out.println("Error escribiendo el archivo: " + e.getMessage());
             }
 
+            //variable para duracion
+            int duracion;
+
             //funcionalidad para imprimir trabajos
             JSONArray trabajos = objetoJSON.getJSONArray("trabajos");
             System.out.println("Trabajos de " + nombre + ":");
             for(int i =0;i< trabajos.length(); i++){
                 JSONObject trabajo = trabajos.getJSONObject(i);
                 System.out.println("Empresa: " + trabajo.getString("empresa") + " puesto: " + trabajo.getString("puesto"));
-
+                duracion = (trabajo.getInt("añoFin") - trabajo.getInt("añoInicio"));
+                System.out.println("Duracion: "+ duracion);
+                trabajo.put("duracion", duracion);
             }
-
+            //escribimos duracion
+            try(FileWriter fileWriter = new FileWriter(filePath)){
+                fileWriter.write(objetoJSON.toString(2));
+            }catch (IOException e){
+                System.out.println("Error escribiendo el archivo: " + e.getMessage());
+            }
 
         } catch (IOException e) {
             System.out.println("Error leyendo el archivo: " + e.getMessage());
