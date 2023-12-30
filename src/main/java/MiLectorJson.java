@@ -12,6 +12,8 @@ public class MiLectorJson {
         String filePath = "src/main/java/datosUsuario.json"; // ruta real de archivo JSON
         String nuevoJsonPath = "src/main/java/datosUsuarioModificado.json"; //ruta del nuevo JSON
 
+        //habilidad a buscar
+        String habilidadBuscada = "Java";
         //try/catch para leer Json
         try {
             String content = new String(Files.readAllBytes(Paths.get(filePath)));
@@ -74,8 +76,32 @@ public class MiLectorJson {
                 System.out.println("Error escribiendo el archivo: " + e.getMessage());
             }
 
+            //llamamos a metodo para ver si tiene la habilidad
+            if (tieneHabilidad(objetoJSON, habilidadBuscada)) {
+                System.out.println("Yennefer tiene la habilidad: " + habilidadBuscada);
+            } else {
+                System.out.println("Yennefer no tiene la habilidad: " + habilidadBuscada);
+            }
+
+
         } catch (IOException e) {
             System.out.println("Error leyendo el archivo: " + e.getMessage());
         }
     }
+
+    //funcion que comprueba si tiene la habilidad, tiene que ser static igual que el main
+    public static boolean tieneHabilidad(JSONObject jsonObject, String habilidad) { //static?
+        JSONArray habilidades = jsonObject.getJSONArray("habilidades");
+
+        for (int i = 0; i < habilidades.length(); i++) {
+            if (habilidades.getString(i).equalsIgnoreCase(habilidad)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 }
+
+
