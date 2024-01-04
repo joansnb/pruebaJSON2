@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 
 public class MiLectorJson {
     //actualizado a version 1.0
+    //comentario para hacer un commit mas
     public static void main(String[] args) {
         String filePath = "src/main/java/datosUsuario.json"; // ruta real de archivo JSON
         String nuevoJsonPath = "src/main/java/datosUsuarioModificado.json"; //ruta del nuevo JSON
